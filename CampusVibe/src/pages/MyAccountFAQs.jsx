@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Text, Heading, Img } from "../../components";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import MyAccountFAQsFaq from "../../components/MyAccountFAQsFaq";
+import { Text, Heading, Img } from "../components";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import MyAccountFAQsFaq from "../components/MyAccountFAQsFaq";
 import { Accordion, AccordionItem } from "react-accessible-accordion";
 
 export default function MyAccountFAQsPage() {
@@ -24,11 +24,23 @@ export default function MyAccountFAQsPage() {
           <div className="flex flex-col items-center gap-6">
             <div className="container-xs flex flex-col items-center md:p-5">
               <div className="flex flex-wrap items-center gap-1.5 self-start">
-                <Text as="p" className="capitalize tracking-[-0.20px] !text-gray-500">
+                <Text
+                  as="p"
+                  className="capitalize tracking-[-0.20px] !text-gray-500"
+                >
                   Home
                 </Text>
-                <Img src="images/img_arrow_right_gray_600.svg" alt="arrow icon" className="h-[24px] w-[24px]" />
-                <a href="FAQs" target="_blank" rel="noreferrer" className="self-end">
+                <Img
+                  src="images/img_arrow_right_gray_600.svg"
+                  alt="arrow icon"
+                  className="h-[24px] w-[24px]"
+                />
+                <a
+                  href="FAQs"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="self-end"
+                >
                   <Heading as="h1" className="capitalize tracking-[-0.20px]">
                     FAQs
                   </Heading>
@@ -65,7 +77,10 @@ export default function MyAccountFAQsPage() {
                 </div>
               </div>
               <div className="h-[712px] w-px bg-gray-300 md:h-px md:w-[712px]" />
-              <Accordion preExpanded={[0]} className="flex flex-1 flex-col gap-6 md:w-full md:self-stretch">
+              <Accordion
+                preExpanded={[0]}
+                className="flex flex-1 flex-col gap-6 md:w-full md:self-stretch"
+              >
                 {[...Array(6)].map((_, i) => (
                   <AccordionItem uuid={i} key={`Expandable List${i}`}>
                     <MyAccountFAQsFaq />

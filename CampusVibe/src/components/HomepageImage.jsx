@@ -1,5 +1,5 @@
 import React from "react";
-import { Img, Button, Text, Heading } from "./..";
+import { Img, Button, Text, Heading } from ".";
 
 export default function HomepageImage({
   offer = "Flat 20% Discount",
@@ -24,7 +24,11 @@ export default function HomepageImage({
         <Text as="p" className="!font-medium ! text-white-A700">
           {offer}
         </Text>
-        <Heading size="4x1" as="h3" className="w-full !font-bold leading-[47px] ! text-white-A700">
+        <Heading
+          size="4x1"
+          as="h3"
+          className="w-full !font-bold leading-[47px] ! text-white-A700"
+        >
           {explorethe}
         </Heading>
         <Text as="p" className="w-full !font-medium leading-7 !text-white-A700">
@@ -34,7 +38,13 @@ export default function HomepageImage({
           color="blue_700"
           size="3x1"
           shape="round"
-          rightIcon={<Img src="images/img_frame.svg" alt="frame" className="h-[24px] w-[24px]" />}
+          rightIcon={
+            <Img
+              src="images/img_frame.svg"
+              alt="frame"
+              className="h-[24px] w-[24px]"
+            />
+          }
           className="min-w-[176px] gap-2.5 font-bold sm:px-5"
         >
           {shopNow}

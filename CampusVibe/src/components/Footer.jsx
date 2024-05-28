@@ -1,4 +1,4 @@
-import { Img, Text, Heading, Button, Input } from "./..";
+import { Img, Text, Heading, Button, Input } from ".";
 import React from "react";
 
 export default function Footer({ ...props }) {
@@ -18,7 +18,8 @@ export default function Footer({ ...props }) {
               </>
             </Heading>
             <Text as="p" className="!font-medium !text-gray-600">
-              Get 20% off on your first order just by subscribing to our newsletter
+              Get 20% off on your first order just by subscribing to our
+              newsletter
             </Text>
             <div className="relative h-[66px] w-[78%] md:h-auto">
               <Input
@@ -56,12 +57,21 @@ export default function Footer({ ...props }) {
                   className="h-[32px] object-contain md:w-[544px]"
                 />
                 <div className="flex flex-col gap-[18px]">
-                  <Text size="md" as="p" className="leading-[26px] !text-white-A700">
-                    Style Flows Here: Your Ultimate Fashion Destination! Explore Trendsetting Collections, Shop the
-                    Latest Looks, and Let Your Fashion Flow with Us!
+                  <Text
+                    size="md"
+                    as="p"
+                    className="leading-[26px] !text-white-A700"
+                  >
+                    Style Flows Here: Your Ultimate Fashion Destination! Explore
+                    Trendsetting Collections, Shop the Latest Looks, and Let
+                    Your Fashion Flow with Us!
                   </Text>
                   <div className="flex items-center gap-2.5 self-start">
-                    <Img src="images/img_lock_white_a700.svg" alt="lock icon" className="h-[24px] w-[24px]" />
+                    <Img
+                      src="images/img_lock_white_a700.svg"
+                      alt="lock icon"
+                      className="h-[24px] w-[24px]"
+                    />
                     <Text size="md" as="p" className="self-end text-white-A700">
                       FashionFlow@Gmail.com
                     </Text>
@@ -188,9 +198,21 @@ export default function Footer({ ...props }) {
                 © 2020 All Right Reserved
               </Text>
               <div className="flex w-[11%] justify-between gap-5">
-                <Img src="images/img_bx_bxl_instagram_alt.svg" alt="instagram icon" className="h-[24px] w-[24px]" />
-                <Img src="images/img_akar_icons_twitter_fill.svg" alt="twitter icon" className="h-[24px] w-[24px]" />
-                <Img src="images/img_akar_icons_linkedin_fill.svg" alt="linkedin icon" className="h-[24px] w-[24px]" />
+                <Img
+                  src="images/img_bx_bxl_instagram_alt.svg"
+                  alt="instagram icon"
+                  className="h-[24px] w-[24px]"
+                />
+                <Img
+                  src="images/img_akar_icons_twitter_fill.svg"
+                  alt="twitter icon"
+                  className="h-[24px] w-[24px]"
+                />
+                <Img
+                  src="images/img_akar_icons_linkedin_fill.svg"
+                  alt="linkedin icon"
+                  className="h-[24px] w-[24px]"
+                />
               </div>
             </div>
           </div>

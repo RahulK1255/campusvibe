@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Button, Heading, Text, Img } from "../../components";
-import AddressTwoAddress from "../../components/AddressTwoAddress";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
+import { Button, Heading, Text, Img } from "../components";
+import AddressTwoAddress from "../components/AddressTwoAddress";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default function AddressTwoPage() {
   return (
@@ -25,7 +25,10 @@ export default function AddressTwoPage() {
           <div className="flex flex-col items-center gap-[46px]">
             <div className="container-xs flex flex-col items-center md:p-5">
               <div className="flex flex-wrap items-center gap-1.5 self-start">
-                <Text as="p" className="capitalize tracking-[-1.14px] !text-gray-500">
+                <Text
+                  as="p"
+                  className="capitalize tracking-[-1.14px] !text-gray-500"
+                >
                   Home
                 </Text>
                 <Img
@@ -33,7 +36,10 @@ export default function AddressTwoPage() {
                   alt="arrow right"
                   className="h-[24px] w-[24px] self-start"
                 />
-                <Text as="p" className="self-end capitalize tracking-[-1.14px] !text-gray-500">
+                <Text
+                  as="p"
+                  className="self-end capitalize tracking-[-1.14px] !text-gray-500"
+                >
                   Shopping Cart
                 </Text>
                 <Img
@@ -68,7 +74,13 @@ export default function AddressTwoPage() {
                 <Button
                   size="6x1"
                   shape="round"
-                  leftIcon={<Img src="images/img_plus_solid.svg" alt="plus/solid" className="h-[36px] w-[36px]" />}
+                  leftIcon={
+                    <Img
+                      src="images/img_plus_solid.svg"
+                      alt="plus/solid"
+                      className="h-[36px] w-[36px]"
+                    />
+                  }
                   className="w-full gap-4 border border-solid border-blue_gray-100 font-medium !text-blue_gray-900_01 sm:px-5"
                 >
                   Add Address
@@ -122,7 +134,12 @@ export default function AddressTwoPage() {
                     <Heading as="h5">$992</Heading>
                   </div>
                 </div>
-                <Button color="blue_gray_900_01" size="5x1" shape="round" className="w-full font-medium sm:px-5">
+                <Button
+                  color="blue_gray_900_01"
+                  size="5x1"
+                  shape="round"
+                  className="w-full font-medium sm:px-5"
+                >
                   CONFIRM PAYMENT
                 </Button>
               </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Heading, Img } from "./..";
+import { Text, Heading, Img } from "../components";
 
 export default function WishlistProductcard({
   image = "images/img_rectangle_136.png",

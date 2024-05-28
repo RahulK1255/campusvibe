@@ -1,8 +1,16 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Button, Heading, Text, TextArea, SelectBox, Img, Input } from "../../components";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
+import {
+  Button,
+  Heading,
+  Text,
+  TextArea,
+  SelectBox,
+  Img,
+  Input,
+} from "../components";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 const dropDownOptions = [
   { label: "Option1", value: "option1" },
@@ -28,7 +36,10 @@ export default function AddressOnePage() {
           <div className="flex flex-col items-center gap-[46px]">
             <div className="container-xs flex flex-col items-center md:p-5">
               <div className="flex flex-wrap items-center gap-1.5 self-start sm:flex-col">
-                <Text as="p" className="capitalize tracking-[-0.20px] !text-gray-500">
+                <Text
+                  as="p"
+                  className="capitalize tracking-[-0.20px] !text-gray-500"
+                >
                   Home
                 </Text>
                 <Img
@@ -36,7 +47,10 @@ export default function AddressOnePage() {
                   alt="arrow right"
                   className="h-[24px] w-[24px] self-start sm:w-full"
                 />
-                <Text as="p" className="self-end capitalize tracking-[-0.20px] !text-gray-500">
+                <Text
+                  as="p"
+                  className="self-end capitalize tracking-[-0.20px] !text-gray-500"
+                >
                   Shopping Cart
                 </Text>
                 <Img
@@ -73,7 +87,9 @@ export default function AddressOnePage() {
                   <div className="flex gap-5 self-stretch md:flex-col">
                     <div className="flex w-full flex-col items-start gap-[7px]">
                       <Text as="p" className="!font-medium">
-                        <span className="text-blue_gray-900_01">Email address&nbsp;</span>
+                        <span className="text-blue_gray-900_01">
+                          Email address&nbsp;
+                        </span>
                         <span className="text-red-600">*</span>
                       </Text>
                       <Input
@@ -86,7 +102,9 @@ export default function AddressOnePage() {
                     </div>
                     <div className="flex w-full flex-col items-start gap-[7px]">
                       <Text as="p" className="!font-medium">
-                        <span className="text-blue_gray-900_01">Phone number&nbsp;</span>
+                        <span className="text-blue_gray-900_01">
+                          Phone number&nbsp;
+                        </span>
                         <span className="text-red-600">*</span>
                       </Text>
                       <Input
@@ -100,7 +118,9 @@ export default function AddressOnePage() {
                   </div>
                   <div className="flex flex-col items-start gap-[5px] self-stretch">
                     <Text as="p" className="!font-medium">
-                      <span className="text-blue_gray-900_01">Country&nbsp;</span>
+                      <span className="text-blue_gray-900_01">
+                        Country&nbsp;
+                      </span>
                       <span className="text-red-600">*</span>
                     </Text>
                     <SelectBox
@@ -116,7 +136,11 @@ export default function AddressOnePage() {
                       getOptionLabel={(e) => (
                         <>
                           <div className="flex items-center">
-                            <Img src="images/img_television.svg" alt="television" className="h-[26px] w-[34px]" />
+                            <Img
+                              src="images/img_television.svg"
+                              alt="television"
+                              className="h-[26px] w-[34px]"
+                            />
                             <span>{e.label}</span>
                           </div>
                         </>
@@ -129,7 +153,9 @@ export default function AddressOnePage() {
                   </div>
                   <div className="flex flex-col items-start gap-[7px] self-stretch">
                     <Text as="p" className="!font-medium">
-                      <span className="text-blue_gray-900_01">Your address&nbsp;</span>
+                      <span className="text-blue_gray-900_01">
+                        Your address&nbsp;
+                      </span>
                       <span className="text-red-600">*</span>
                     </Text>
                     <TextArea
@@ -198,7 +224,12 @@ export default function AddressOnePage() {
                       <Heading as="h5">₹992</Heading>
                     </div>
                   </div>
-                  <Button color="gray_300_02" size="5xl" shape="round" className="w-full font-medium sm:px-5">
+                  <Button
+                    color="gray_300_02"
+                    size="5xl"
+                    shape="round"
+                    className="w-full font-medium sm:px-5"
+                  >
                     CONFIRM PAYMENT
                   </Button>
                 </div>

@@ -1,9 +1,17 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Button, Heading, Text, TextArea, SelectBox, Img, Input } from "../../components";
-import AddressTwoAddress from "../../components/AddressTwoAddress";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
+import {
+  Button,
+  Heading,
+  Text,
+  TextArea,
+  SelectBox,
+  Img,
+  Input,
+} from "../components";
+import AddressTwoAddress from "../components/AddressTwoAddress";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 const dropDownOptions = [
   { label: "Option1", value: "option1" },
@@ -29,7 +37,10 @@ export default function AddressThreePage() {
           <div className="flex flex-col items-center gap-[46px]">
             <div className="container-xs flex flex-col items-center md:p-5">
               <div className="flex flex-wrap items-center gap-1.5 self-start">
-                <Text as="p" className="capitalize tracking-[-1.14px] !text-gray-500">
+                <Text
+                  as="p"
+                  className="capitalize tracking-[-1.14px] !text-gray-500"
+                >
                   Home
                 </Text>
                 <Img
@@ -37,7 +48,10 @@ export default function AddressThreePage() {
                   alt="right arrow"
                   className="h-[24px] w-[24px] self-start"
                 />
-                <Text as="p" className="self-end capitalize tracking-[-1.14px] !text-gray-500">
+                <Text
+                  as="p"
+                  className="self-end capitalize tracking-[-1.14px] !text-gray-500"
+                >
                   Shopping Cart
                 </Text>
                 <Img
@@ -85,7 +99,9 @@ export default function AddressThreePage() {
                   <div className="flex gap-5 md:flex-col">
                     <div className="flex w-full flex-col items-start gap-[7px]">
                       <Text as="p" className="!font-medium">
-                        <span className="text-blue_gray-900_01">Email address&nbsp;</span>
+                        <span className="text-blue_gray-900_01">
+                          Email address&nbsp;
+                        </span>
                         <span className="text-red-600">*</span>
                       </Text>
                       <Input
@@ -98,7 +114,9 @@ export default function AddressThreePage() {
                     </div>
                     <div className="flex w-full flex-col items-start gap-[7px]">
                       <Text as="p" className="!font-medium">
-                        <span className="text-blue_gray-900_01">Phone number&nbsp;</span>
+                        <span className="text-blue_gray-900_01">
+                          Phone number&nbsp;
+                        </span>
                         <span className="text-red-600">*</span>
                       </Text>
                       <Input
@@ -112,7 +130,9 @@ export default function AddressThreePage() {
                   </div>
                   <div className="flex flex-col items-start gap-[5px]">
                     <Text as="p" className="!font-medium">
-                      <span className="text-blue_gray-900_01">Country&nbsp;</span>
+                      <span className="text-blue_gray-900_01">
+                        Country&nbsp;
+                      </span>
                       <span className="text-red-600">*</span>
                     </Text>
                     <SelectBox
@@ -127,7 +147,11 @@ export default function AddressThreePage() {
                       }
                       getOptionLabel={(e) => (
                         <div className="flex items-center">
-                          <Img src="images/img_television.svg" alt="television" className="h-[26px] w-[34px]" />
+                          <Img
+                            src="images/img_television.svg"
+                            alt="television"
+                            className="h-[26px] w-[34px]"
+                          />
                           <span>{e.label}</span>
                         </div>
                       )}
@@ -139,7 +163,9 @@ export default function AddressThreePage() {
                   </div>
                   <div className="flex flex-col items-start gap-[7px]">
                     <Text as="p" className="!font-medium">
-                      <span className="text-blue_gray-900_01">Your address&nbsp;</span>
+                      <span className="text-blue_gray-900_01">
+                        Your address&nbsp;
+                      </span>
                       <span className="text-red-600">*</span>
                     </Text>
                     <TextArea
@@ -150,7 +176,12 @@ export default function AddressThreePage() {
                     />
                   </div>
                   <div className="flex gap-6">
-                    <Button color="blue_700" size="5x1" shape="round" className="min-w-[178px] font-medium sm:px-5">
+                    <Button
+                      color="blue_700"
+                      size="5x1"
+                      shape="round"
+                      className="min-w-[178px] font-medium sm:px-5"
+                    >
                       ADD ADDRESS
                     </Button>
                     <Button
@@ -216,7 +247,12 @@ export default function AddressThreePage() {
                   <Heading as="h6">₹992</Heading>
                 </div>
               </div>
-              <Button color="blue_gray_900_01" size="5xl" shape="RoundedBorder12" variant="Outline">
+              <Button
+                color="blue_gray_900_01"
+                size="5xl"
+                shape="RoundedBorder12"
+                variant="Outline"
+              >
                 <div className="flex items-center justify-center gap-[10px]">
                   <Img
                     src="images/img_arrowright.svg"

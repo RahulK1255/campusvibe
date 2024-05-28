@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Heading, Img, Button } from "./..";
+import { Text, Heading, Img, Button } from ".";
 
 export default function HomepageColumntrendy({
   image = "images/img_rectangle_136_5.png",
@@ -31,11 +31,7 @@ export default function HomepageColumntrendy({
           {title}
         </Heading>
         <div className="flex gap-[17px]">
-          <Heading
-            size="md"
-            as="h6"
-            className="! font-semibold !text-gray-400"
-          >
+          <Heading size="md" as="h6" className="! font-semibold !text-gray-400">
             {brand}
           </Heading>
           <div className="flex items-center gap-1">

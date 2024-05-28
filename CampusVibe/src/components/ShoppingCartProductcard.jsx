@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Heading, Img, Button } from "./..";
+import { Text, Heading, Img, Button } from "../components";
 
 export default function ShoppingCartProductcard({
   image = "images/img_rectangle_136_5.png",
@@ -14,8 +14,15 @@ export default function ShoppingCartProductcard({
   return (
     <div {...props} className={` ${props.className} flex flex-col w-full`}>
       <div className="relative h-[461px] self-stretch md:h-auto">
-        <Img src={image} alt="graphic image" className="h-[461px] w-full object-cover" />
-        <Button shape="square" className="absolute left-[10.00px] top-[10.00px] m-auto min-w-[106px] font-bold">
+        <Img
+          src={image}
+          alt="graphic image"
+          className="h-[461px] w-full object-cover"
+        />
+        <Button
+          shape="square"
+          className="absolute left-[10.00px] top-[10.00px] m-auto min-w-[106px] font-bold"
+        >
           {buttontext}
         </Button>
       </div>
@@ -28,7 +35,11 @@ export default function ShoppingCartProductcard({
             {brand}
           </Heading>
           <div className="flex items-center gap-1">
-            <Img src="images/img_frame_amber_500.svg" alt="rating image" className="h-[16px] w-[16px]" />
+            <Img
+              src="images/img_frame_amber_500.svg"
+              alt="rating image"
+              className="h-[16px] w-[16px]"
+            />
             <Heading size="md" as="h6" className="font-semibold">
               {rating}
             </Heading>

@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { SelectBox, Img, Text, Heading } from "../../components";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import MyAccountMyOrdersProduct from "../../components/MyAccountMyOrdersProduct";
+import { SelectBox, Img, Text, Heading } from "../components";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import MyAccountMyOrdersProduct from "../components/MyAccountMyOrdersProduct";
 
 const data = [
   {
@@ -76,7 +76,10 @@ export default function MyAccountMyordersPage() {
           <div className="flex flex-col items-center gap-[22px]">
             <div className="container-xs flex flex-col items-center md:p-5">
               <div className="flex flex-wrap items-center self-start">
-                <Text as="p" className="capitalize tracking-[-0.20px] !text-gray-500">
+                <Text
+                  as="p"
+                  className="capitalize tracking-[-0.20px] !text-gray-500"
+                >
                   Home
                 </Text>
                 <Img
@@ -84,7 +87,10 @@ export default function MyAccountMyordersPage() {
                   alt="arrow icon"
                   className="ml-1.5 h-[24px] w-[24px] self-start"
                 />
-                <Heading as="h1" className="ml-2.5 self-end capitalize tracking-[-0.20px]">
+                <Heading
+                  as="h1"
+                  className="ml-2.5 self-end capitalize tracking-[-0.20px]"
+                >
                   My Account
                 </Heading>
               </div>
@@ -160,7 +166,10 @@ export default function MyAccountMyordersPage() {
                 {/* order history section */}
                 <div className="flex flex-col gap-6">
                   {data.map((d, index) => (
-                    <MyAccountMyOrdersProduct {...d} key={"productsList" + index} />
+                    <MyAccountMyOrdersProduct
+                      {...d}
+                      key={"productsList" + index}
+                    />
                   ))}
                 </div>
               </div>

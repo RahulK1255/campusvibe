@@ -1,5 +1,5 @@
 import React from "react";
-import { Img, Heading, Text, SelectBox, Button } from "./..";
+import { Img, Heading, Text, SelectBox, Button } from "../components";
 
 const dropDownOptions = [
   { label: "Option1", value: "option1" },
@@ -23,7 +23,11 @@ export default function ShoppingCartProduct({
     >
       <div className="flex flex-1 md:self-stretch">
         <div className="relative h-[149px] w-[18%] md:h-auto md:w-full">
-          <Img src={image} alt="product image" className="h-[149px] w-full object-cover" />
+          <Img
+            src={image}
+            alt="product image"
+            className="h-[149px] w-full object-cover"
+          />
           <Button
             color="blue_gray_900_01"
             size="xs"
@@ -43,7 +47,11 @@ export default function ShoppingCartProduct({
             <SelectBox
               shape="round"
               indicator={
-                <Img src="images/img_arrowdown_black_900_01.svg" alt="arrow_down" className="h-[16px] w-[16px]" />
+                <Img
+                  src="images/img_arrowdown_black_900_01.svg"
+                  alt="arrow_down"
+                  className="h-[16px] w-[16px]"
+                />
               }
               name="Size Dropdown"
               placeholder="Size: XL"
@@ -53,7 +61,11 @@ export default function ShoppingCartProduct({
             <SelectBox
               shape="round"
               indicator={
-                <Img src="images/img_arrowdown_black_900_01.svg" alt="arrow_down" className="h-[16px] w-[16px]" />
+                <Img
+                  src="images/img_arrowdown_black_900_01.svg"
+                  alt="arrow_down"
+                  className="h-[16px] w-[16px]"
+                />
               }
               name="Quantity Dropdown"
               placeholder="Qty: 1"
@@ -74,7 +86,11 @@ export default function ShoppingCartProduct({
           </div>
         </div>
       </div>
-      <Img src="images/img_icon_gray_400_01.svg" alt="secondary image" className="h-[24px] w-[24px] md:w-full" />
+      <Img
+        src="images/img_icon_gray_400_01.svg"
+        alt="secondary image"
+        className="h-[24px] w-[24px] md:w-full"
+      />
     </div>
   );
 }

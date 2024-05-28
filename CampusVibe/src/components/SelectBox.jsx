@@ -34,7 +34,7 @@ const SelectBox = React.forwardRef(
       color = "gray_100_01",
       ...restProps
     },
-    ref
+    ref,
   ) => {
     return (
       <>
@@ -88,7 +88,7 @@ const SelectBox = React.forwardRef(
         {children}
       </>
     );
-  }
+  },
 );
 
 SelectBox.propTypes = {

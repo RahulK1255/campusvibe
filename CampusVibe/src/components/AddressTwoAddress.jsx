@@ -1,4 +1,4 @@
-import { Text, Img } from "./.";
+import { Text, Img } from ".";
 import React from "react";
 
 export default function AddressTwoAddress({
@@ -8,7 +8,6 @@ export default function AddressTwoAddress({
   editbutton = "Edit",
   ...props
 }) {
-
   return (
     <div
       {...props}

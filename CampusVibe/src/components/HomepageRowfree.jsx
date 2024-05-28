@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Heading, Img } from "./..";
+import { Text, Heading, Img } from ".";
 
 export default function HomepageRowfree({
   title = "Free Shipping",

@@ -29,15 +29,11 @@ const CheckBox = React.forwardRef(
     return (
       <>
         <div
-          className={
-            className +
-            " flex items-center gap-[5px] cursor-pointer"
-          }
+          className={className + " flex items-center gap-[5px] cursor-pointer"}
         >
           <input
             className={
-              (size && sizes[size]) || "" +
-              (variant && variants[variant]) || ""
+              (size && sizes[size]) || "" + (variant && variants[variant]) || ""
             }
             ref={ref}
             type="checkbox"
@@ -55,12 +51,12 @@ const CheckBox = React.forwardRef(
 );
 
 CheckBox.propTypes = {
-    className: PropTypes.string,
-    name: PropTypes.string,
-    label: PropTypes.string,
-    id: PropTypes.string,
-    size: PropTypes.oneOf(["xs"]),
-    variant: PropTypes.oneOf(["primary"]),
-  };
-  
-  export { CheckBox };
+  className: PropTypes.string,
+  name: PropTypes.string,
+  label: PropTypes.string,
+  id: PropTypes.string,
+  size: PropTypes.oneOf(["xs"]),
+  variant: PropTypes.oneOf(["primary"]),
+};
+
+export { CheckBox };

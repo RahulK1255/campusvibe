@@ -6,7 +6,8 @@ const shapes = {
 };
 
 const variants = {
-  tarOutlineBluegray100: "border-blue_gray-100 border border-solid bg-white-A700",
+  tarOutlineBluegray100:
+    "border-blue_gray-100 border border-solid bg-white-A700",
 };
 
 const sizes = {
@@ -25,7 +26,7 @@ const TextArea = React.forwardRef(
       onChange,
       ...restProps
     },
-    ref
+    ref,
   ) => {
     const handleChange = (e) => {
       if (onChange) onChange(e?.target?.value);

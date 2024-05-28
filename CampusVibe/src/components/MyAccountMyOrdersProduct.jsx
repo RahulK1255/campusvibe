@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Img, Heading, Text } from "./..";
+import { Button, Img, Heading, Text } from "../components";
 
 export default function MyAccountMyOrdersProduct({
   arrivingfri = "Arriving Fri, May 24",

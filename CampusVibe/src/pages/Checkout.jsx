@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Button, Heading, Text, Input, Img } from "../../components";
-import CheckoutHdfcdebitcard from "../../components/CheckoutHdfcdebitcard";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
+import { Button, Heading, Text, Input, Img } from "../components";
+import CheckoutHdfcdebitcard from "../components/CheckoutHdfcdebitcard";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default function CheckoutPage() {
   return (
@@ -23,7 +23,10 @@ export default function CheckoutPage() {
           <div className="flex flex-col items-center gap-[46px]">
             <div className="container-xs flex flex-col items-center md:p-5">
               <div className="flex flex-wrap items-center gap-1.5 self-start">
-                <Text as="p" className="capitalize tracking-[-0.20px] !text-gray-500">
+                <Text
+                  as="p"
+                  className="capitalize tracking-[-0.20px] !text-gray-500"
+                >
                   Home
                 </Text>
                 <Img
@@ -31,7 +34,10 @@ export default function CheckoutPage() {
                   alt="right arrow"
                   className="h-[24px] w-[24px] self-start"
                 />
-                <Text as="p" className="self-end capitalize tracking-[-0.20px] !text-gray-500">
+                <Text
+                  as="p"
+                  className="self-end capitalize tracking-[-0.20px] !text-gray-500"
+                >
                   Shopping Cart
                 </Text>
                 <Img
@@ -39,7 +45,10 @@ export default function CheckoutPage() {
                   alt="right arrow"
                   className="h-[24px] w-[24px] self-start"
                 />
-                <Heading as="h1" className="self-end capitalize tracking-[-0.20px]">
+                <Heading
+                  as="h1"
+                  className="self-end capitalize tracking-[-0.20px]"
+                >
                   Checkout
                 </Heading>
               </div>
@@ -56,19 +65,35 @@ export default function CheckoutPage() {
                   </div>
                   <div className="flex flex-col gap-6">
                     <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md border border-solid border-blue_gray-100 bg-white-A700 p-4">
-                      <Img src="images/img_clock.svg" alt="upi icon" className="h-[36px] w-[36px]" />
+                      <Img
+                        src="images/img_clock.svg"
+                        alt="upi icon"
+                        className="h-[36px] w-[36px]"
+                      />
                       <div className="flex items-center gap-4">
-                        <Img src="images/img_image_46.png" alt="upi image" className="h-[16px] object-cover" />
+                        <Img
+                          src="images/img_image_46.png"
+                          alt="upi image"
+                          className="h-[16px] object-cover"
+                        />
                         <Text size="xl" as="p">
                           UPI
                         </Text>
                       </div>
                     </div>
                     <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md border border-solid border-blue_gray-100 bg-white-A700 p-4 md:flex-col">
-                      <Img src="images/img_clock.svg" alt="google pay icon" className="h-[36px] w-[36px] md:w-full" />
+                      <Img
+                        src="images/img_clock.svg"
+                        alt="google pay icon"
+                        className="h-[36px] w-[36px] md:w-full"
+                      />
                       <div className="flex flex-1 items-center justify-center gap-2.5 md:self-stretch">
                         <div className="flex px-px pb-[5px] pt-[7px]">
-                          <Img src="images/img_settings.svg" alt="settings icon" className="h-[17px]" />
+                          <Img
+                            src="images/img_settings.svg"
+                            alt="settings icon"
+                            className="h-[17px]"
+                          />
                         </div>
                         <div className="flex">
                           <Text size="xl" as="p">
@@ -78,18 +103,34 @@ export default function CheckoutPage() {
                       </div>
                     </div>
                     <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md border border-solid border-blue_gray-100 bg-white-A700 p-4">
-                      <Img src="images/img_clock.svg" alt="clock" className="h-[36px] w-[36px]" />
+                      <Img
+                        src="images/img_clock.svg"
+                        alt="clock"
+                        className="h-[36px] w-[36px]"
+                      />
                       <div className="flex items-center gap-4">
-                        <Img src="images/img_ic_baseline_laptop.svg" alt="icbaseline" className="h-[34px]" />
+                        <Img
+                          src="images/img_ic_baseline_laptop.svg"
+                          alt="icbaseline"
+                          className="h-[34px]"
+                        />
                         <Text size="xl" as="p" className="self-end">
                           Net Banking
                         </Text>
                       </div>
                     </div>
                     <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md border border-solid border-blue_gray-100 bg-white-A700 p-4">
-                      <Img src="images/img_clock.svg" alt="clock" className="h-[36px] w-[36px]" />
+                      <Img
+                        src="images/img_clock.svg"
+                        alt="clock"
+                        className="h-[36px] w-[36px]"
+                      />
                       <div className="flex items-center gap-4">
-                        <Img src="images/img_money_1.svg" alt="moneyone" className="h-[34px]" />
+                        <Img
+                          src="images/img_money_1.svg"
+                          alt="moneyone"
+                          className="h-[34px]"
+                        />
                         <Text size="xl" as="p" className="self-end">
                           Cash on Delivery
                         </Text>
@@ -111,7 +152,11 @@ export default function CheckoutPage() {
                   </div>
                   <div className="flex flex-col gap-[30px] rounded-md border border-solid border-blue_gray-100 bg-white-A700 px-4 py-6 sm:py-5">
                     <div className="flex items-center gap-6 self-start sm:flex-col">
-                      <Img src="images/img_contrast.svg" alt="add card icon" className="h-[36px] w-[36px] sm:w-full" />
+                      <Img
+                        src="images/img_contrast.svg"
+                        alt="add card icon"
+                        className="h-[36px] w-[36px] sm:w-full"
+                      />
                       <Text size="xl" as="p">
                         Add New Credit/Debit/ATM Card
                       </Text>
@@ -144,7 +189,11 @@ export default function CheckoutPage() {
                           name="Number Input"
                           placeholder="XXXX XXXX XXXX XX34"
                           suffix={
-                            <Img src="images/img_rupaylogo_1.png" alt="rupay-logo" className="h-[17px] w-[57px]" />
+                            <Img
+                              src="images/img_rupaylogo_1.png"
+                              alt="rupay-logo"
+                              className="h-[17px] w-[57px]"
+                            />
                           }
                           className="gap-[35px] border-blue_gray-100"
                         />
@@ -239,7 +288,12 @@ export default function CheckoutPage() {
                     <Heading as="h4">₹992</Heading>
                   </div>
                 </div>
-                <Button color="gray_300_02" size="5x1" shape="round" className="w-full font-medium sm:px-5">
+                <Button
+                  color="gray_300_02"
+                  size="5x1"
+                  shape="round"
+                  className="w-full font-medium sm:px-5"
+                >
                   CONFIRM PAYMENT
                 </Button>
               </div>

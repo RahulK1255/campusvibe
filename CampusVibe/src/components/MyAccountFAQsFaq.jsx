@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Img, Heading } from "./..";
+import { Text, Img, Heading } from "../components";
 import {
   AccordionItemPanel,
   AccordionItemHeading,

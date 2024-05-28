@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Heading, Img, Button } from "./..";
+import { Text, Heading, Img, Button } from "../components";
 
 export default function ProductListProductcard({
   image = "images/img_rectangle_136_341x273.png",

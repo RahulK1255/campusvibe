@@ -1,9 +1,71 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [],
+module.exports = {
+  mode: "jit",
+  content: [
+    "./src/**/**/*.{js,ts,jsx,tsx,html,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,html,mdx}"
+  ],
+  darkMode: "class",
   theme: {
-    extend: {},
+    screens: {
+      md: { max: "1050px" },
+      sm: { max: "550px" },
+    },
+    extend: {
+      colors: {
+        red: { 500: "#ea4335" , 600: "#e04343", "600_01": "#e04243"},
+        green: {
+          400: "#65bc6a",
+          600: "#34a853",
+          700: "#398f3e",
+          800: "#29752b",
+          900: "#236823",
+          "900_01": "#0a8100",
+          "600_01": "#359766",
+        },
+        blue: { 700: "#286fe5", A200: "#4285f4" },
+        gray: {
+          50: "#f5f8fa",
+          100: "#f5f5f5",
+          200: "#e6e7eb",
+          300: "#ебебе6",
+          400: "#c0bfc0",
+          500: "#949494",
+          600: "#777c84",
+          800: "#4f4f4f",
+          "800_02": "#3c4043",
+          "800_01": "#505050",
+          "200_01": "#e7e7e7",
+          "200_02": "#fofofo",
+          "400_01": "#bdbdbd",
+          "100_01": "#f5f5f6",
+          "500_01": "#a8a8a8",
+          "500_02": "#979797",
+          "600_01": "#848484",
+          "300_02": "#dbdbdb",
+          "300_01": "#dde1e6",
+        },
+        black: { 900: "#0b0c0c", "900_01": "#000000", "900_19": "#00000019" },
+        blue_gray: {
+          100: "#d6dae2",
+          200: "#b4b6c4",
+          300: "#8a96a4",
+          400: "#888ea2",
+          600: "#5d6180",
+          700: "#535479",
+          800: "#3e454f",
+          900: "#262b35",
+          "900_01": "#1b2834",
+          "100_01": "#d6d5d5",
+          "200_01": "#adaeb5",
+          "900_0c": "#1b28340c",
+        },
+        white: { A700_4c: "#ffffff4c", A700: "#ffffff", A700_cc: "#ffffffcc" },
+        amber: { 500: "#ffc107", "500_01": "#fbbc04" },
+        teal: { 400: "#389674" },
+      },
+      boxShadow: { xs: "0px 2px 12px 0px #00000019" },
+      fontFamily: { inter: "Inter", chivo: "Chivo" },
+    },
   },
-  plugins: [],
-}
-
+  plugins: [require("@tailwindcss/forms")],
+};

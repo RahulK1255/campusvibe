@@ -1,8 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Button, SelectBox, Img, Text, Input, Heading } from "../../components";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
+import { Button, SelectBox, Img, Text, Input, Heading } from "../components";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 const dropDownOptions = [
   { label: "Option1", value: "option1" },
@@ -26,11 +26,21 @@ export default function MyAccountPersonalInformationPage() {
           <div className="flex flex-col items-center gap-[22px]">
             <div className="container-xs flex flex-col items-center md:p-5">
               <div className="flex flex-wrap items-center self-start">
-                <Text as="p" className="capitalize tracking-[-0.20px] !text-gray-500">
+                <Text
+                  as="p"
+                  className="capitalize tracking-[-0.20px] !text-gray-500"
+                >
                   Home
                 </Text>
-                <Img src="images/img_arrow_right_gray_600.svg" alt="arrow image" className="ml-1.5 h-[24px] w-[24px] self-start" />
-                <Heading as="h1" className="ml-2.5 self-end capitalize tracking-[-0.20px]">
+                <Img
+                  src="images/img_arrow_right_gray_600.svg"
+                  alt="arrow image"
+                  className="ml-1.5 h-[24px] w-[24px] self-start"
+                />
+                <Heading
+                  as="h1"
+                  className="ml-2.5 self-end capitalize tracking-[-0.20px]"
+                >
                   My Account
                 </Heading>
               </div>
@@ -74,8 +84,17 @@ export default function MyAccountPersonalInformationPage() {
               {/* Personal information form content goes here */}
               <div className="flex flex-1 flex-col gap-9 md:self-stretch">
                 <div className="relative h-[120px] w-[14%] md:h-auto">
-                  <Img src="images/img_sherlock_toy_face_low.png" alt="profile image" className="h-[120px] w-[120px] rounded-[50%]" />
-                  <Button color="blue_700" size="x1" shape="circle" className="absolute bottom-[1.00px] right-[1.00px] m-auto w-[38px] !rounded-[19px]">
+                  <Img
+                    src="images/img_sherlock_toy_face_low.png"
+                    alt="profile image"
+                    className="h-[120px] w-[120px] rounded-[50%]"
+                  />
+                  <Button
+                    color="blue_700"
+                    size="x1"
+                    shape="circle"
+                    className="absolute bottom-[1.00px] right-[1.00px] m-auto w-[38px] !rounded-[19px]"
+                  >
                     <Img src="images/img_pencil_alt_1.svg" />
                   </Button>
                 </div>
@@ -85,18 +104,34 @@ export default function MyAccountPersonalInformationPage() {
                       <div className="flex w-full flex-col items-start gap-[7px]">
                         <Text as="p" className="!font-medium">
                           <span className="text-blue_gray-900_01">First</span>
-                          <span className="text-blue_gray-900_01">&nbsp;name&nbsp;</span>
+                          <span className="text-blue_gray-900_01">
+                            &nbsp;name&nbsp;
+                          </span>
                           <span className="text-red_600_01">*</span>
                         </Text>
-                        <Input shape="round" type="text" name="First Name Input" placeholder="First name" className="self-stretch border-blue_gray-100 sm:pr-5" />
+                        <Input
+                          shape="round"
+                          type="text"
+                          name="First Name Input"
+                          placeholder="First name"
+                          className="self-stretch border-blue_gray-100 sm:pr-5"
+                        />
                       </div>
                       <div className="flex w-full flex-col items-start gap-[7px]">
                         <Text as="p" className="!font-medium">
                           <span className="text-blue_gray-900_01">Last</span>
-                          <span className="text-blue_gray-900_01">&nbsp;name&nbsp;</span>
+                          <span className="text-blue_gray-900_01">
+                            &nbsp;name&nbsp;
+                          </span>
                           <span className="text-red_600_01">*</span>
                         </Text>
-                        <Input shape="round" type="text" name="Last Name Input" placeholder="Last name" className="self-stretch border-blue_gray-100 sm:pr-5" />
+                        <Input
+                          shape="round"
+                          type="text"
+                          name="Last Name Input"
+                          placeholder="Last name"
+                          className="self-stretch border-blue_gray-100 sm:pr-5"
+                        />
                       </div>
                     </div>
                     <div className="flex flex-col items-start gap-[7px]">
@@ -104,17 +139,33 @@ export default function MyAccountPersonalInformationPage() {
                         <span className="text-blue_gray-900_01">Email</span>
                         <span className="text-red_600_01">*</span>
                       </Text>
-                      <Input shape="round" type="email" name="Email Input" placeholder="Email" className="self-stretch border-blue_gray-100 sm:pr-5" />
+                      <Input
+                        shape="round"
+                        type="email"
+                        name="Email Input"
+                        placeholder="Email"
+                        className="self-stretch border-blue_gray-100 sm:pr-5"
+                      />
                     </div>
                     <div className="flex flex-col items-start gap-[7px]">
                       <Text as="p" className="!font-medium">
-                        <span className="text-blue_gray-900_01">Phone Number</span>
+                        <span className="text-blue_gray-900_01">
+                          Phone Number
+                        </span>
                       </Text>
-                      <Input shape="round" type="text" name="Phone Number Input" placeholder="Phone number" className="self-stretch border-blue_gray-100 sm:pr-5" />
+                      <Input
+                        shape="round"
+                        type="text"
+                        name="Phone Number Input"
+                        placeholder="Phone number"
+                        className="self-stretch border-blue_gray-100 sm:pr-5"
+                      />
                     </div>
                     <div className="flex flex-col items-start gap-[7px]">
                       <Text as="p" className="!font-medium">
-                        <span className="text-blue_gray-900_01">Gender&nbsp;</span>
+                        <span className="text-blue_gray-900_01">
+                          Gender&nbsp;
+                        </span>
                         <span className="text-red_600_01">*</span>
                       </Text>
                       <SelectBox
@@ -134,7 +185,14 @@ export default function MyAccountPersonalInformationPage() {
                       />
                     </div>
                   </div>
-                  <Button color="blue_gray_900_01" size="5xl" shape="round" className="min-w-[237px] font-medium sm:px-5">UPDATE</Button>
+                  <Button
+                    color="blue_gray_900_01"
+                    size="5xl"
+                    shape="round"
+                    className="min-w-[237px] font-medium sm:px-5"
+                  >
+                    UPDATE
+                  </Button>
                 </div>
               </div>
             </div>

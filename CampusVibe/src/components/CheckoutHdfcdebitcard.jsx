@@ -1,11 +1,11 @@
-import { Text, Img } from "../..";
+import { Text, Img } from ".";
 import React from "react";
 
 export default function CheckoutHdfcDebitCard({
-    cardtitle = "HDFC Debit Card",
-    cardnumber = "XXXX XXXX XXXX XX48",
-    expirydate = "Exp : 03/22",
-    ...props
+  cardtitle = "HDFC Debit Card",
+  cardnumber = "XXXX XXXX XXXX XX48",
+  expirydate = "Exp : 03/22",
+  ...props
 }) {
   return (
     <div
@@ -28,10 +28,18 @@ export default function CheckoutHdfcDebitCard({
             {cardtitle}
           </Text>
           <div className="flex flex-wrap justify-between gap-5 self-stretch">
-            <Text size="md" as="p" className="self-start !font-medium !text-gray-600">
+            <Text
+              size="md"
+              as="p"
+              className="self-start !font-medium !text-gray-600"
+            >
               {cardnumber}
             </Text>
-            <Text size="md" as="p" className="self-end !font-medium !text-gray-600">
+            <Text
+              size="md"
+              as="p"
+              className="self-end !font-medium !text-gray-600"
+            >
               {expirydate}
             </Text>
           </div>
