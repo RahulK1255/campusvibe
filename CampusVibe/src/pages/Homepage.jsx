@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Helmet } from "react-helmet";
 import { Button, Img, Heading, Text } from "../components";
 import Footer from "../components/Footer";
@@ -85,6 +85,11 @@ const data4 = [
   },
 ];
 
+const data5 = [
+  {  discountimage : "images/img_portrait_young.png",},
+  {  discountimage : "images/img_portrait_man_we.png",}
+]
+
 export default function HomePage() {
   return (
     <>
@@ -96,13 +101,17 @@ export default function HomePage() {
         />
       </Helmet>
       <div className="flex w-full flex-col items-center gap-[89px] bg-white-A700 md:gap-[66px] sm:gap-11">
+        {/* promo announcement section */}
         <div className="flex flex-col items-end self-stretch bg-gray-50">
+          {/* main header section */}
           <Header className="self-stretch" />
+
           {/* hero section */}
           <div className="flex w-[92%] items-center gap-12 md:w-full md:flex-col md:p-5">
             <div className="flex flex-1 flex-col items-start gap-6 md:self-stretch">
               <Button
-                size="4x1"
+                color="white_A700"
+                size="4xl"
                 leftIcon={
                   <Img
                     src="images/img_icon_blue_gray_900_01.svg"
@@ -129,8 +138,7 @@ export default function HomePage() {
                 Elevate Your Wardrobe Today!
               </Text>
               <Button
-                color="blue_gray_900_01"
-                size="3x1"
+                size="3xl"
                 shape="round"
                 rightIcon={
                   <Img
@@ -151,42 +159,52 @@ export default function HomePage() {
             />
           </div>
         </div>
+
+        {/* services section */}
         <div className="flex flex-col items-center gap-[90px] self-stretch md:gap-[67px] sm:gap-[45px]">
-          {/* services section */}
           <div className="flex justify-center self-stretch">
             <div className="container-xs flex gap-[134px] md:flex-col md:p-5">
-              {data2.map((d, index) => (
-                <HomepageRowfree
-                  {...d}
-                  key={"partnerList" + index}
-                  className="flex-1"
-                />
-              ))}
+              <Suspense fallback={<div>Loading feed...</div>}>
+                {data2.map((d, index) => (
+                  <HomepageRowfree
+                    {...d}
+                    key={"partnerList" + index}
+                    className="flex-1"
+                  />
+                ))}
+              </Suspense>
             </div>
           </div>
-          {/* categories section */}
+
+          {/* categories highlights section */}
           <div className="container-xs flex gap-12 md:flex-col md:p-5">
-            {data.map((d, index) => (
-              <div
-                key={"productList" + index}
-                className="relative h-[485px] w-full md:h-auto"
-              >
-                <Img
-                  src={d.womenImage}
-                  alt="women image"
-                  className="h-[485px] w-full rounded-md object-cover"
-                />
-                <Heading
-                  size="4x1"
-                  as="h2"
-                  className="absolute bottom-[9%] left-0 right-0 m-auto w-max !font-extrabold tracking-[15.00px] ! text-white-A700"
+            <Suspense>
+              {data.map((d, index) => (
+                <div
+                  key={"productList" + index}
+                  className="relative h-[485px] w-full md:h-auto"
                 >
-                  {d.womenTitle}
-                </Heading>
-              </div>
-            ))}
+                  <a href="" target="_blank">
+                    <Img
+                      src={d.womenImage}
+                      alt="women image"
+                      className="h-[485px] w-full rounded-md object-cover"
+                    />
+                  </a>
+                  <Heading
+                    size="4xl"
+                    as="h2"
+                    className="absolute bottom-[9%] left-0 right-0 m-auto w-max !font-extrabold tracking-[15.00px] ! text-white-A700"
+                  >
+                    {d.womenTitle}
+                  </Heading>
+                </div>
+              ))}
+            </Suspense>
           </div>
         </div>
+
+        {/* featured products section */}
         <div className="flex justify-center self-stretch bg-white-A700">
           <div className="container-xs flex justify-center bg-white-A700 md:p-5">
             <Tabs
@@ -197,7 +215,7 @@ export default function HomePage() {
               <Heading as="h2" className="!text-gray-600">
                 Our Products
               </Heading>
-              <Heading size="4x1" as="h3" className="mt-[17px]">
+              <Heading size="4xl" as="h3" className="mt-[17px]">
                 Our Bestselling Products
               </Heading>
               <TabList className="mt-3 flex w-[49%] flex-wrap justify-between gap-[104px] py-[15px] pl-[57px] pr-[50px] md:w-full md:gap-5 md:px-5">
@@ -218,13 +236,15 @@ export default function HomePage() {
                 <TabPanel key={`tab-panel${index}`} className="absolute">
                   <div className="w-full self-stretch">
                     <div className="flex gap-12 md:flex-col">
-                      {data4.map((d, index) => (
-                        <HomepageColumntrendy
-                          {...d}
-                          key={"trendyList" + index}
-                          className="gap-4 md:w-full"
-                        />
-                      ))}
+                      <Suspense>
+                        {data4.map((d, index) => (
+                          <HomepageColumntrendy
+                            {...d}
+                            key={"trendyList" + index}
+                            className="gap-4 md:w-full"
+                          />
+                        ))}
+                      </Suspense>
                     </div>
                   </div>
                 </TabPanel>
@@ -232,6 +252,7 @@ export default function HomePage() {
             </Tabs>
           </div>
         </div>
+
         {/* limited time offer section */}
         <div className="flex justify-center self-stretch bg-gray-50">
           <div className="container-xs flex items-center justify-center gap-[50px] md:flex-col md:p-5">
@@ -255,7 +276,6 @@ export default function HomePage() {
                 Fashion Items! Limited Time Offer, Act Fast!
               </Text>
               <Button
-                color="blue_gray_900_01"
                 size="3xl"
                 shape="round"
                 rightIcon={
@@ -272,27 +292,31 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        {/* discount section */}
+
+        {/* fashion discount section */}
         <div className="container-xs flex gap-12 md:flex-col md:p-5">
-          {[...Array(2)].map((d, index) => (
-            <HomepageImage
-              offer="Flat 20% Discount"
-              explorethe="<>Explore the Latest<br />in Men's Fashion</>"
-              stepintostyle="Step into Style Unveiling the Newest Trends"
-              shopNow="Shop Now"
-              image="images/img_portrait_man_we.png"
-              key={"discountList" + index}
-              className="pr-5"
-            />
-          ))}
+          <Suspense fallback={<div>Loading feed...</div>}>
+            {data5.map((item, index) => (
+              <HomepageImage
+                offer="Flat 20% Discount"
+                explorethe={<>Explore the Latest<br />in Men&#39;s Fashion</>}
+                stepintostyle="Step into Style Unveiling the Newest Trends"
+                shopNow="Shop Now"
+                image={item.discountimage}
+                key={"discountList" + index}
+                className="pr-5"
+              />
+            ))}
+          </Suspense>
         </div>
+
         {/* deals of the day section */}
         <div className="container-xs flex flex-col gap-[47px] md:p-5">
           <div className="flex flex-col items-start gap-[15px]">
             <Heading as="h2" className="!text-gray-800_01">
               Today Deals
             </Heading>
-            <Heading size="4x1" as="h3">
+            <Heading size="4xl" as="h3">
               Deals of the Day
             </Heading>
           </div>
@@ -329,7 +353,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="flex flex-wrap items-center gap-[15px]">
-                  <Heading size="2x1" as="h2">
+                  <Heading size="2xl" as="h2">
                     Rs. 700
                   </Heading>
                   <Text as="p" className="!text-gray-600_01 line-through">
@@ -375,15 +399,15 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="flex flex-wrap items-center gap-[15px]">
-                    <Heading size="2x1" as="h4">
+                    <Heading size="2xl" as="h4">
                       Rs. 700
                     </Heading>
-                    <Text as="p" className="! text-gray-600_01 line-through">
+                    <Text as="p" className="!text-gray-600_01 line-through">
                       Rs. 1000
                     </Text>
                     <Heading
                       as="h5"
-                      className="self-end ! font-bold ! text-green-900_01"
+                      className="self-end !font-bold !text-green-900_01"
                     >
                       (30% off)
                     </Heading>
@@ -408,11 +432,11 @@ export default function HomePage() {
                       as="p"
                       className="!font-medium !text-gray-600_01"
                     >
-                      | ZARA
+                      ZARA
                     </Text>
                     <div className="flex items-center gap-[3px]">
                       <Text size="md" as="p" className="!text-gray-600_01">
-                        | 4.4
+                        4.4
                       </Text>
                       <Img
                         src="images/img_signal.png"
@@ -422,7 +446,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="flex flex-wrap items-center gap-[15px]">
-                    <Heading size="2x1" as="h6">
+                    <Heading size="2xl" as="h6">
                       Rs. 700
                     </Heading>
                     <Text as="p" className="!text-gray-600_01 line-through">
@@ -444,38 +468,44 @@ export default function HomePage() {
         {/* instagram follow section */}
         <div className="flex justify-center self-stretch bg-blue_gray-900_01 py-[90px] md:py-5">
           <div className="container-xs flex flex-col items-center gap-[46px] md:p-5">
-            <Heading size="4x1" as="h2" className="!text-white-A700">
+            <Heading size="4xl" as="h2" className="!text-white-A700">
               Follow Us On Instagram
             </Heading>
             <div className="flex w-full gap-[30px] md:flex-col">
-              {data3.map((d, index) => (
-                <div key={"imageList" + index} className="flex w-full flex-col">
-                  <Img
-                    src={d.cardImage}
-                    alt="card image"
-                    className="h-[313px] rounded-md object-cover"
-                  />
-                </div>
-              ))}
+              <Suspense>
+                {data3.map((d, index) => (
+                  <div key={"imageList" + index} className="flex w-full flex-col">
+                    <Img
+                      src={d.cardImage}
+                      alt="card image"
+                      className="h-[313px] rounded-md object-cover"
+                    />
+                  </div>
+                ))}
+              </Suspense>
             </div>
           </div>
         </div>
+
         {/* news and blog section */}
         <div className="container-xs flex flex-col items-center gap-12 md:p-5">
           <div className="flex flex-col items-center gap-4">
             <Heading as="h2" className="!text-gray-600">
               News & Blog
             </Heading>
-            <Heading size="4x1" as="h3">
+            <Heading size="4xl" as="h3">
               Our Latest News & Blogs
             </Heading>
           </div>
           <div className="flex w-full gap-[30px] md:flex-col">
-            {data1.map((d, index) => (
-              <HomepageColumnjuly {...d} key={"blogList" + index} />
-            ))}
+            <Suspense>
+              {data1.map((d, index) => (
+                <HomepageColumnjuly {...d} key={"blogList" + index} />
+              ))}
+            </Suspense>
           </div>
         </div>
+
         {/* faq section */}
         <div className="flex justify-center self-stretch bg-gray-50 py-[90px] md:py-5">
           <div className="container-xs flex flex-col items-center gap-[49px] md:p-5">
@@ -483,20 +513,20 @@ export default function HomePage() {
               <Heading as="h2" className="!text-gray-600">
                 FAQ
               </Heading>
-              <Heading size="4x1" as="h3">
+              <Heading size="4xl" as="h3">
                 Have Queries? Refer Here
               </Heading>
             </div>
             <div className="self-stretch">
               <div className="flex flex-col gap-6">
                 <div className="flex flex-1 cursor-pointer flex-col gap-6 rounded-[12px] border border-solid border-gray-100 bg-white-A700 p-6 shadow-xs hover:border hover:border-solid hover:border-blue_gray-900_01 hover:shadow-xs sm:p-5">
-                  <div className="flex items-center justify-between gap-5 p1-[5px]">
-                    <Heading as="h4" className="self-end text-black-900">
+                  <div className="flex items-center justify-between gap-5 pl-[5px]">
+                    <Heading as="h4" className="self-end !text-black-900">
                       How long does shipping take?
                     </Heading>
                     <Button
                       color="black_900"
-                      size="nd"
+                      size="md"
                       shape="square"
                       className="w-[24px] rotate-[180deg] self-start"
                     >
@@ -511,78 +541,77 @@ export default function HomePage() {
                     for customers who need their orders to arrive more quickly.
                   </Text>
                 </div>
-                <div className="flex flex-1 cursor-pointer items-center justify-between gap-5 rounded-[12px] border border-solid border-gray-100 bg-white-A700 pb-[25px] p1-7 pr-6 pt-[27px] hover:border hover:border-solid hover:border-blue_gray-900_01 hover:shadow-xs sm:p-5">
-                  <Heading as="h5" className="self-end text-black-900">
+                <div className="flex flex-1 cursor-pointer items-center justify-between gap-5 rounded-[12px] border border-solid border-gray-100 bg-white-A700 pb-[25px] pl-7 pr-6 pt-[27px] hover:border hover:border-solid hover:border-blue_gray-900_01 hover:shadow-xs sm:p-5">
+                  <Heading as="h5" className="self-end !text-black-900">
                     Can I return or exchange items?
                   </Heading>
                   <Button
                     color="black_900"
-                    size="nd"
+                    size="md"
                     shape="square"
                     className="w-[24px] self-start"
                   >
                     <Img src="images/img_arrow_down.svg" />
                   </Button>
                 </div>
-                <div className="flex flex-1 cursor-pointer items-center justify-between gap-5 rounded-[12px] border border-solid border-gray-100 bg-white-A700 pb-[26px] p1-[27px] pr-6 pt-[27px] hover:border hover:border-solid hover:border-blue_gray-900_01 hover:shadow-xs sm:p-5">
-                  <Heading as="h6" className="self-end text-black-900">
+                <div className="flex flex-1 cursor-pointer items-center justify-between gap-5 rounded-[12px] border border-solid border-gray-100 bg-white-A700 pb-[26px] pl-[27px] pr-6 pt-[27px] hover:border hover:border-solid hover:border-blue_gray-900_01 hover:shadow-xs sm:p-5">
+                  <Heading as="h6" className="self-end !text-black-900">
                     What sizes do you offer?
                   </Heading>
                   <Button
                     color="black_900"
-                    size="nd"
+                    size="md"
                     shape="square"
                     className="w-[24px] self-start"
                   >
                     <Img src="images/img_arrow_down.svg" />
                   </Button>
                 </div>
-                <div className="flex flex-1 cursor-pointer items-center justify-between gap-5 rounded-[12px] border border-solid border-gray-100 bg-white-A700 pb-[26px] p1-[27px] pr-6 pt-[27px] hover:border hover:border-solid hover:border-blue_gray-900_01 hover:shadow-xs sm:p-5">
-                  <Heading as="h6" className="self-end text-black-900">
+                <div className="flex flex-1 cursor-pointer items-center justify-between gap-5 rounded-[12px] border border-solid border-gray-100 bg-white-A700 pb-[26px] pl-[27px] pr-6 pt-[27px] hover:border hover:border-solid hover:border-blue_gray-900_01 hover:shadow-xs sm:p-5">
+                  <Heading as="h6" className="self-end !text-black-900">
                     Are your products sustainable?
                   </Heading>
                   <Button
                     color="black_900"
-                    size="nd"
+                    size="md"
                     shape="square"
                     className="w-[24px] self-start"
                   >
                     <Img src="images/img_arrow_down.svg" />
                   </Button>
                 </div>
-                <div className="flex flex-1 cursor-pointer items-center justify-between gap-5 rounded-[12px] border border-solid border-gray-100 bg-white-A700 pb-[25px] p1-7 pr-6 pt-[27px] hover:border hover:border-solid hover:border-blue_gray-900_01 hover:shadow-xs sm:p-5">
-                  <Heading as="h6" className="self-end text-black-900">
+                <div className="flex flex-1 cursor-pointer items-center justify-between gap-5 rounded-[12px] border border-solid border-gray-100 bg-white-A700 pb-[25px] pl-7 pr-6 pt-[27px] hover:border hover:border-solid hover:border-blue_gray-900_01 hover:shadow-xs sm:p-5">
+                  <Heading as="h6" className="self-end !text-black-900">
                     How can I contact customer support?
                   </Heading>
                   <Button
                     color="black_900"
-                    size="nd"
+                    size="md"
                     shape="square"
                     className="w-[24px] self-start"
                   >
                     <Img src="images/img_arrow_down.svg" />
                   </Button>
                 </div>
-                <div className="flex flex-1 cursor-pointer items-center justify-between gap-5 rounded-[12px] border border-solid border-gray-100 bg-white-A700 pb-[25px] p1-[27px] pr-6 pt-[27px] hover:border hover:border-solid hover:border-blue_gray-900_01 hover:shadow-xs sm:p-5">
-                  <Heading as="h6" className="self-end text-black-900">
+                <div className="flex flex-1 cursor-pointer items-center justify-between gap-5 rounded-[12px] border border-solid border-gray-100 bg-white-A700 pb-[25px] pl-[27px] pr-6 pt-[27px] hover:border hover:border-solid hover:border-blue_gray-900_01 hover:shadow-xs sm:p-5">
+                  <Heading as="h6" className="self-end !text-black-900">
                     Do you offer international shipping?
                   </Heading>
                   <Button
                     color="black_900"
-                    size="nd"
+                    size="md"
                     shape="square"
                     className="w-[24px] self-start"
                   >
                     <Img src="images/img_arrow_down.svg" />
                   </Button>
-                </div>
-                <div className="flex flex-1 cursor-pointer items-center justify-between gap-5 rounded-[12px] border border-solid border-gray-100 bg-white-A700 pb-[25px] p1-[27px] pr-6 pt-[27px] hover:border hover:border-solid hover:border-blue_gray-900_01 hover:shadow-xs sm:p-5">
-                  ...
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        {/* newsletter signup section */}
         <Footer className="self-stretch" />
       </div>
     </>

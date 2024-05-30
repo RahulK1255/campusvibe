@@ -11,10 +11,10 @@ const sizes = {
 const CheckBox = React.forwardRef(
   (
     {
-      className,
-      name,
+      className = "",
+      name = "",
       children,
-      label,
+      label = "",
       id = "checkbox_id",
       onChange,
       variant = "primary",
@@ -32,9 +32,7 @@ const CheckBox = React.forwardRef(
           className={className + " flex items-center gap-[5px] cursor-pointer"}
         >
           <input
-            className={
-              (size && sizes[size]) || "" + (variant && variants[variant]) || ""
-            }
+            className={`${(size && sizes[size]) || ""} ${(variant && variants[variant]) || ""}`}
             ref={ref}
             type="checkbox"
             name={name}

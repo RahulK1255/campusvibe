@@ -1,5 +1,5 @@
 import React from "react";
-import { Img, Button, Text, Heading } from ".";
+import { Img, Button, Text, Heading } from "../components";
 
 export default function HomepageImage({
   offer = "Flat 20% Discount",
@@ -7,7 +7,7 @@ export default function HomepageImage({
     <>
       Explore the Latest
       <br />
-      in Men's Fashion
+      in Men&#39;s Fashion
     </>
   ),
   stepintostyle = "Step into Style Unveiling the Newest Trends",
@@ -18,16 +18,16 @@ export default function HomepageImage({
   return (
     <div
       {...props}
-      className={`${props.className} flex sm:flex-col items-center w-full pl-[37px] sm:p1-5 bg-blue_gray-900_01 rounded-md`}
+      className={`${props.className} flex sm:flex-col items-center w-full pl-[37px] sm:pl-5 bg-blue_gray-900_01 rounded-md`}
     >
       <div className="relative z-[1] flex w-[48%] flex-col items-start gap-4 sm:w-full">
-        <Text as="p" className="!font-medium ! text-white-A700">
+        <Text as="p" className="!font-medium !text-white-A700">
           {offer}
         </Text>
         <Heading
-          size="4x1"
+          size="4xl"
           as="h3"
-          className="w-full !font-bold leading-[47px] ! text-white-A700"
+          className="w-full !font-bold leading-[47px] !text-white-A700"
         >
           {explorethe}
         </Heading>
@@ -36,7 +36,7 @@ export default function HomepageImage({
         </Text>
         <Button
           color="blue_700"
-          size="3x1"
+          size="3xl"
           shape="round"
           rightIcon={
             <Img

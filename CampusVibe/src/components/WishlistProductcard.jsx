@@ -23,14 +23,14 @@ export default function WishlistProductcard({
         />
       </div>
       <div className="flex flex-col items-start gap-[15px]">
-        <Text size="2x1" as="p">
+        <Text size="2xl" as="p">
           {trendytshirt}
         </Text>
         <div className="flex flex-wrap gap-2">
-          <Heading size="2x1" as="h4">
+          <Heading size="2xl" as="h4">
             {rscounter1}
           </Heading>
-          <Text size="2x1" as="p" className="!text-gray-400 line-through">
+          <Text size="2xl" as="p" className="!text-gray-400 line-through">
             {rscounter2}
           </Text>
         </div>

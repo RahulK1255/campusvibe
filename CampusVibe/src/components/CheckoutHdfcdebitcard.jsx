@@ -1,4 +1,4 @@
-import { Text, Img } from ".";
+import { Text, Img } from "../components";
 import React from "react";
 
 export default function CheckoutHdfcDebitCard({

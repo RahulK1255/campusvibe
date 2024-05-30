@@ -1,6 +1,6 @@
 import React from "react";
 export const SearchSVG = ({
-  fillColor = "var(--rococo)",
+  fillColor = "#000000",
   className = "",
   ...props
 }) => {

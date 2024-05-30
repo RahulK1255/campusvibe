@@ -21,7 +21,7 @@ export default function SIGNUPPage() {
             <Img
               src="images/img_header_logo.svg"
               alt="logo image"
-              className="h-[32px] w- [126px] object-contain"
+              className="h-[32px] w-[126px] object-contain"
             />
             {/* signup form section */}
             <div className="flex flex-col items-center gap-6">
@@ -51,7 +51,7 @@ export default function SIGNUPPage() {
                         shape="round"
                         type="text"
                         name="Last Name Input"
-                        placeholder={"Last name"}
+                        placeholder={`Last name`}
                         className="self-stretch border-blue_gray-100 sm:pr-5"
                       />
                     </div>
@@ -112,7 +112,7 @@ export default function SIGNUPPage() {
                   href="https://www.youtube.com/embed/bv8Fxk0sz7I"
                   target="_blank"
                 >
-                  <Heading size="md" as="h2" className="font-semibold">
+                  <Heading size="md" as="h2" className="!font-semibold">
                     Sign In
                   </Heading>
                 </a>

@@ -23,7 +23,7 @@ const Heading = ({
   const Component = as || "h6";
   return (
     <Component
-      className={`text-blue-gray-900 font-inter ${className} ${sizes[size]}`}
+      className={` text-blue_gray-900_01 font-inter ${className} ${sizes[size]}`}
       {...restProps}
     >
       {children}

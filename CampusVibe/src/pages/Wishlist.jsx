@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Helmet } from "react-helmet";
 import { Heading, Img, Text } from "../components";
 import Footer from "../components/Footer";
@@ -82,16 +82,20 @@ export default function WishlistPage() {
             </div>
             {/* product grid section */}
             <div className="container-xs grid grid-cols-3 justify-center gap-12 md:grid-cols-2 md:p-5 sm:grid-cols-1">
-              {data.map((d, index) => (
-                <WishlistProductcard
-                  {...d}
-                  key={"productGrid" + index}
-                  className="gap-[15px]"
-                />
-              ))}
+              <Suspense fallback={<div>Loading feed...</div>}>
+                {data.map((d, index) => (
+                  <WishlistProductcard
+                    {...d}
+                    key={"productGrid" + index}
+                    className="gap-[15px]"
+                  />
+                ))}
+              </Suspense>
             </div>
           </div>
         </div>
+
+        {/* newsletter signup section */}
         <Footer />
       </div>
     </>

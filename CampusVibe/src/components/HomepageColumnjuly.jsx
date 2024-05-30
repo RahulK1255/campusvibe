@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Heading, Img } from ".";
+import { Text, Heading, Img } from "../components";
 
 export default function HomepageColumnjuly({
   userimage = "images/img_rectangle_142_306x381.png",

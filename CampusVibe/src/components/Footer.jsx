@@ -1,4 +1,4 @@
-import { Img, Text, Heading, Button, Input } from ".";
+import { Img, Text, Heading, Button, Input } from "../components";
 import React from "react";
 
 export default function Footer({ ...props }) {
@@ -33,7 +33,7 @@ export default function Footer({ ...props }) {
               <Button
                 color="blue_700"
                 shape="round"
-                className="absolute bottom-0 right-[8px] top-0 my-auto min-w-[151px] font-medium sm:px-5"
+                className="absolute bottom-0 right-[8.00px] top-0 my-auto min-w-[151px] font-medium sm:px-5"
               >
                 GET STARTED
               </Button>
@@ -72,7 +72,7 @@ export default function Footer({ ...props }) {
                       alt="lock icon"
                       className="h-[24px] w-[24px]"
                     />
-                    <Text size="md" as="p" className="self-end text-white-A700">
+                    <Text size="md" as="p" className="self-end !text-white-A700">
                       FashionFlow@Gmail.com
                     </Text>
                   </div>
@@ -122,13 +122,13 @@ export default function Footer({ ...props }) {
                   </ul>
                 </div>
                 <div className="flex w-[42%] flex-col gap-[15px] sm:w-full">
-                  <Heading size="md" as="h6" className="text-white-A700">
+                  <Heading size="md" as="h6" className="!text-white-A700">
                     Company
                   </Heading>
                   <ul className="flex flex-col gap-4">
                     <li>
                       <a href="About" target="_blank" rel="noreferrer">
-                        <Text size="md" as="p" className="text-gray-200">
+                        <Text size="md" as="p" className="!text-gray-200">
                           About
                         </Text>
                       </a>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Heading, Img, Button } from ".";
+import { Text, Heading, Img, Button } from "../components";
 
 export default function HomepageColumntrendy({
   image = "images/img_rectangle_136_5.png",
@@ -20,6 +20,8 @@ export default function HomepageColumntrendy({
           className="h-[461px] w-full object-cover"
         />
         <Button
+          color="white_A700"
+          size="2xl"
           shape="square"
           className="absolute left-[10.00px] top-[10.00px] m-auto min-w-[106px] font-bold"
         >
@@ -27,11 +29,11 @@ export default function HomepageColumntrendy({
         </Button>
       </div>
       <div className="flex flex-col items-start gap-[5px] self-stretch">
-        <Heading size="2x1" as="h4" className="!font-semibold">
+        <Heading size="2xl" as="h4" className="!font-semibold">
           {title}
         </Heading>
         <div className="flex gap-[17px]">
-          <Heading size="md" as="h6" className="! font-semibold !text-gray-400">
+          <Heading size="md" as="h6" className="!font-semibold !text-gray-400">
             {brand}
           </Heading>
           <div className="flex items-center gap-1">
@@ -46,10 +48,10 @@ export default function HomepageColumntrendy({
           </div>
         </div>
         <div className="flex flex-wrap gap-2">
-          <Heading size="2x1" as="h4">
+          <Heading size="2xl" as="h4">
             {price1}
           </Heading>
-          <Text size="2x1" as="p" className="!text-gray-400 line-through">
+          <Text size="2xl" as="p" className="!text-gray-400 line-through">
             {price2}
           </Text>
         </div>

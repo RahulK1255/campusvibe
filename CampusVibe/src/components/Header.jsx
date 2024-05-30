@@ -1,12 +1,12 @@
 import React from "react";
-import { Img, Heading, Text } from ".";
+import { Img, Heading, Text } from "../components";
 
 export default function Header({ ...props }) {
   return (
     <header {...props}>
       <div className="flex justify-center self-stretch bg-blue_gray-900_01 py-[15px]">
         <div className="container-xs flex items-center justify-between gap-5 md:flex-col md:p-5">
-          <Text size="md" as="p" className="self-end text-white-A700">
+          <Text size="md" as="p" className="self-end !text-white-A700">
             <span className="text-white-A700">
               Sign up now and enjoy a 25% discount on your first order.
               Don&#39;t miss out!&nbsp;
