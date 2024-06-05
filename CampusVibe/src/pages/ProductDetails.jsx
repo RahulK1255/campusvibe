@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Helmet } from "react-helmet";
 import { Button, Img, Text, Heading, Input } from "../components";
 import Header from "../components/Header";
@@ -15,7 +15,7 @@ const data = [
     offer: "(30% off)",
   },
   {
-    boldStatement: "images/img_rectangle_137_350x369.png",
+    boldStatement: "images/img_rectangle_420.png",
     boldstatement: "Modern Crewneck Top",
     price: "ZARA",
     fortyfour: "4.4",
@@ -136,7 +136,7 @@ export default function ProductDetailsPage() {
               </div>
               <div className="flex w- [48%] flex-col items-start gap-[35px] md:w-full">
                 <div className="flex flex-col items-start gap-[3px] self-stretch">
-                  <Heading size="2x1" as="h3">
+                  <Heading size="2xl" as="h3">
                     Trendy Black T-shirt
                   </Heading>
                   <Text
@@ -154,15 +154,15 @@ export default function ProductDetailsPage() {
                   </Text>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  <Heading size="2x1" as="h4">
-                    584
+                  <Heading size="2xl" as="h4">
+                    ₹584
                   </Heading>
                   <Text
-                    size="2x1"
+                    size="2xl"
                     as="p"
                     className="!text-gray-500_01 line-through"
                   >
-                    *1299.00
+                    ₹1299.00
                   </Text>
                   <Heading size="2x1" as="h5" className="!text-teal-400">
                     (55% OFF)
@@ -222,7 +222,7 @@ export default function ProductDetailsPage() {
                 <div className="flex gap-4">
                   <Button
                     color="blue_gray_900_01"
-                    size="5x1"
+                    size="5xl"
                     shape="round"
                     className="min-w-[379px] font-medium sm:px-5"
                   >
@@ -230,7 +230,7 @@ export default function ProductDetailsPage() {
                   </Button>
                   <Button
                     color="blue_gray_900_01"
-                    size="5x1"
+                    size="5xl"
                     variant="outline"
                     shape="round"
                     leftIcon={
@@ -296,9 +296,9 @@ export default function ProductDetailsPage() {
         <div className="flex flex-col items-center gap-6 self-stretch">
           <div className="container-xs flex border-b border-solid border-blue_gray-100_01 md:p-5">
             <div className="flex w-[48%] items-start justify-between gap-5 md:w-full sm:flex-col">
-              <div className="flex w- [71%] items-start justify-between gap-5 sm:w-full">
-                <div className="flex w- [36%] flex-col items-center gap-[7px]">
-                  <Text size="md" as="p" className="! font-medium uppercase">
+              <div className="flex w-[71%] items-start justify-between gap-5 sm:w-full">
+                <div className="flex w-[36%] flex-col items-center gap-[7px]">
+                  <Text size="md" as="p" className="!font-medium uppercase">
                     Description
                   </Text>
                   <div className="h-[3px] w-full self-stretch rounded-tl-[1px] rounded-tr-[1px] bg-blue_gray-900_01" />
@@ -306,7 +306,7 @@ export default function ProductDetailsPage() {
                 <Text
                   size="md"
                   as="p"
-                  className="!font-medium uppercase ! text-blue_gray-400"
+                  className="!font-medium uppercase !text-blue_gray-400"
                 >
                   ADDITIONAL INFORMATION
                 </Text>
@@ -314,7 +314,7 @@ export default function ProductDetailsPage() {
               <Text
                 size="md"
                 as="p"
-                className="!font-medium uppercase ! text-blue_gray-400"
+                className="!font-medium uppercase !text-blue_gray-400"
               >
                 Review (40)
               </Text>
@@ -397,7 +397,7 @@ export default function ProductDetailsPage() {
         </div>
         {/* similar products section */}
         <div className="container-xs flex flex-col items-start gap-[47px] md:p-5">
-          <Heading size="4x1" as="h2">
+          <Heading size="4xl" as="h2">
             Similar Products
           </Heading>
           <div className="flex w-full gap-12 md:flex-col">
@@ -413,13 +413,15 @@ export default function ProductDetailsPage() {
         {/* services section */}
         <div className="flex justify-center self-stretch">
           <div className="container-xs flex gap-[134px] md:flex-col md:p-5">
-            {data1.map((d, index) => (
-              <HomepageRowfree
-                {...d}
-                key={"partnersList" + index}
-                className="flex-1"
-              />
-            ))}
+            <Suspense fallback={<div>Loading feed...</div>}>
+              {data1.map((d, index) => (
+                <HomepageRowfree
+                  {...d}
+                  key={"partnersList" + index}
+                  className="flex-1"
+                />
+              ))}
+            </Suspense>
           </div>
         </div>
         {/* footer section */}

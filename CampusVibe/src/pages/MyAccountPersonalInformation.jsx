@@ -81,21 +81,22 @@ export default function MyAccountPersonalInformationPage() {
                 </a>
               </div>
               <div className="h-[660px] w-px bg-gray-300 md:h-px md:w-full" />
+
               {/* Personal information form content goes here */}
               <div className="flex flex-1 flex-col gap-9 md:self-stretch">
-                <div className="relative h-[120px] w-[14%] md:h-auto">
+                <div className="relative w-[14%] h-auto md:h-auto">
                   <Img
                     src="images/img_sherlock_toy_face_low.png"
                     alt="profile image"
-                    className="h-[120px] w-[120px] rounded-[50%]"
+                    className="w-[20vw] h-[20vw] max-w-[100px] max-h-[100px] min-w-[100px] min-h-[100px] rounded-full object-cover"
                   />
                   <Button
                     color="blue_700"
-                    size="x1"
+                    size="xl"
                     shape="circle"
-                    className="absolute bottom-[1.00px] right-[1.00px] m-auto w-[38px] !rounded-[19px]"
+                    className="absolute bottom-0 right-0 transform translate-x-[0%] translate-y-[0%] w-[35px] h-[35px] !rounded-full"
                   >
-                    <Img src="images/img_pencil_alt_1.svg" />
+                    <Img src="images/img_pencil_alt_1.svg" className="w-[20px] h-[20px]" />
                   </Button>
                 </div>
                 <div className="flex flex-col items-start gap-9">
@@ -107,7 +108,7 @@ export default function MyAccountPersonalInformationPage() {
                           <span className="text-blue_gray-900_01">
                             &nbsp;name&nbsp;
                           </span>
-                          <span className="text-red_600_01">*</span>
+                          <span className="text-red-600_01">*</span>
                         </Text>
                         <Input
                           shape="round"
@@ -123,7 +124,7 @@ export default function MyAccountPersonalInformationPage() {
                           <span className="text-blue_gray-900_01">
                             &nbsp;name&nbsp;
                           </span>
-                          <span className="text-red_600_01">*</span>
+                          <span className="text-red-600_01">*</span>
                         </Text>
                         <Input
                           shape="round"
@@ -137,7 +138,10 @@ export default function MyAccountPersonalInformationPage() {
                     <div className="flex flex-col items-start gap-[7px]">
                       <Text as="p" className="!font-medium">
                         <span className="text-blue_gray-900_01">Email</span>
-                        <span className="text-red_600_01">*</span>
+                        <span className="text-blue_gray-900_01">
+                          &nbsp;
+                        </span>
+                        <span className="text-red-600_01">*</span>
                       </Text>
                       <Input
                         shape="round"
@@ -150,13 +154,14 @@ export default function MyAccountPersonalInformationPage() {
                     <div className="flex flex-col items-start gap-[7px]">
                       <Text as="p" className="!font-medium">
                         <span className="text-blue_gray-900_01">
-                          Phone Number
+                          Phone
                         </span>
+                        <span className="text-red-600_01">*</span>
                       </Text>
                       <Input
                         shape="round"
                         type="text"
-                        name="Phone Number Input"
+                        name="Phone Input"
                         placeholder="Phone number"
                         className="self-stretch border-blue_gray-100 sm:pr-5"
                       />
@@ -166,7 +171,7 @@ export default function MyAccountPersonalInformationPage() {
                         <span className="text-blue_gray-900_01">
                           Gender&nbsp;
                         </span>
-                        <span className="text-red_600_01">*</span>
+                        <span className="text-red-600_01">*</span>
                       </Text>
                       <SelectBox
                         color="white_A700"

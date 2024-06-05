@@ -43,7 +43,7 @@ export default function ShoppingCartProduct({
               {price}
             </Text>
           </div>
-          <div className="flex w-[34%] gap-2 md:w-full">
+          <div className="flex flex-col md:flex-row w-full md:w-[34%] gap-2">
             <SelectBox
               shape="round"
               indicator={
@@ -54,9 +54,9 @@ export default function ShoppingCartProduct({
                 />
               }
               name="Size Dropdown"
-              placeholder="Size: XL"
+              placeholder={`Size: XL`}
               options={dropDownOptions}
-              className="flex-grow gap-px font-semibold sm:pr-5"
+              className="flex-1 h-auto font-semibold sm:pr-5"
             />
             <SelectBox
               shape="round"
@@ -68,9 +68,9 @@ export default function ShoppingCartProduct({
                 />
               }
               name="Quantity Dropdown"
-              placeholder="Qty: 1"
+              placeholder={`Qty: 1`}
               options={dropDownOptions}
-              className="w-[46%] gap-px font-semibold sm:pr-5"
+              className="flex-1 h-auto font-semibold sm:pr-5"
             />
           </div>
           <div className="flex flex-wrap gap-2">

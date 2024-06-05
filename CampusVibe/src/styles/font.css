@@ -1,28 +1,28 @@
 @font-face {
   font-display: swap;
   font-style: normal;
-  src: url("/public/fonts/InterSemiBold.ttf");
+  src: url("/fonts/InterSemiBold.ttf");
   font-family: "Inter";
   font-weight: 600;
 }
 @font-face {
   font-display: swap;
   font-style: normal;
-  src: url("/public/fonts/InterMedium.ttf");
+  src: url("/fonts/InterMedium.ttf");
   font-family: "Inter";
   font-weight: 500;
 }
 @font-face {
   font-display: swap;
   font-style: normal;
-  src: url("/public/fonts/InterRegular.ttf");
+  src: url("/fonts/InterRegular.ttf");
   font-family: "Inter";
   font-weight: 400;
 }
 @font-face {
   font-display: swap;
   font-style: normal;
-  src: url("/public/fonts/InterBold.ttf");
+  src: url("/fonts/InterBold.ttf");
   font-family: "Inter";
   font-weight: 700;
 }
@@ -30,21 +30,21 @@
 @font-face {
   font-display: swap;
   font-style: normal;
-  src: url("/public/fonts/ChivoRegular.ttf");
+  src: url("/fonts/ChivoRegular.ttf");
   font-family: "Chivo";
   font-weight: 400;
 }
 @font-face {
   font-display: swap;
   font-style: normal;
-  src: url("/public/fonts/InterExtraBold.ttf");
+  src: url("/fonts/InterExtraBold.ttf");
   font-family: "Inter";
   font-weight: 800;
 }
 @font-face {
   font-display: swap;
   font-style: normal;
-  src: url("/public/fonts/InterLight.ttf");
+  src: url("/fonts/InterLight.ttf");
   font-family: "Inter";
   font-weight: 300;
 }

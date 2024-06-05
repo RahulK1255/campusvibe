@@ -43,8 +43,8 @@ const Button = ({
   rightIcon,
   shape,
   variant = "fill",
-  size = "5xl",
-  color = "blue_gray_900_01",
+  size = "2xl",
+  color = "white_A700",
   ...restProps
 }) => {
   return (

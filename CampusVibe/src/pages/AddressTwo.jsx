@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Helmet } from "react-helmet";
 import { Button, Heading, Text, Img } from "../components";
 import AddressTwoAddress from "../components/AddressTwoAddress";
@@ -60,19 +60,21 @@ export default function AddressTwoPage() {
                   <div className="h-px w-full self-stretch bg-blue_gray-100" />
                 </div>
                 <div className="flex flex-col gap-[23px]">
-                  {[...Array(2)].map((d, index) => (
-                    <AddressTwoAddress
-                      userimage="images/img_contrast.svg"
-                      username="Jone Cooper"
-                      useraddress="2118 Thornridge Cir. Syracuse, Connecticut 35624"
-                      editbutton="Edit"
-                      key={"addressList" + index}
-                      className="pb-[23px]"
-                    />
-                  ))}
+                  <Suspense fallback={<div>Loading feed...</div>}>
+                    {[...Array(2)].map((d, index) => (
+                      <AddressTwoAddress
+                        userimage="images/img_contrast.svg"
+                        username="Jone Cooper"
+                        useraddress="2118 Thornridge Cir. Syracuse, Connecticut 35624"
+                        editbutton="Edit"
+                        key={"addressList" + index}
+                        className="pb-[23px]"
+                      />
+                    ))}
+                  </Suspense>
                 </div>
                 <Button
-                  size="6x1"
+                  size="6xl"
                   shape="round"
                   leftIcon={
                     <Img
@@ -136,7 +138,7 @@ export default function AddressTwoPage() {
                 </div>
                 <Button
                   color="blue_gray_900_01"
-                  size="5x1"
+                  size="5xl"
                   shape="round"
                   className="w-full font-medium sm:px-5"
                 >

@@ -138,6 +138,7 @@ export default function HomePage() {
                 Elevate Your Wardrobe Today!
               </Text>
               <Button
+                color="blue_gray_900_01"
                 size="3xl"
                 shape="round"
                 rightIcon={
@@ -219,7 +220,7 @@ export default function HomePage() {
                 Our Bestselling Products
               </Heading>
               <TabList className="mt-3 flex w-[49%] flex-wrap justify-between gap-[104px] py-[15px] pl-[57px] pr-[50px] md:w-full md:gap-5 md:px-5">
-                <Tab className="h-[20px] w-[20px] text-base font-medium text-white-A700">
+                <Tab className="h-[20px] w-[20px] text-base font-medium text-blue_gray-900_01">
                   All
                 </Tab>
                 <Tab className="text-base font-medium text-blue_gray-900_01">
@@ -276,6 +277,7 @@ export default function HomePage() {
                 Fashion Items! Limited Time Offer, Act Fast!
               </Text>
               <Button
+                color="blue_gray_900_01"
                 size="3xl"
                 shape="round"
                 rightIcon={
@@ -530,7 +532,7 @@ export default function HomePage() {
                       shape="square"
                       className="w-[24px] rotate-[180deg] self-start"
                     >
-                      <Img src="images/ing_arrow_up_black_900.svg" />
+                      <Img src="images/img_arrow_up_black_900.svg" />
                     </Button>
                   </div>
                   <Text as="p" className="leading-[25px] !text-gray-600">

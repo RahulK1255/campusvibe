@@ -104,17 +104,18 @@ export default function ShoppingCartPage() {
                 </Heading>
               </div>
             </div>
-            {/* cart items section */}
             <div className="container-xs flex items-center gap-6 md:flex-col md:p-5">
+              {/* cart items section */}
               <div className="flex flex-1 flex-col gap-[23px] md:self-stretch">
                 <div className="flex flex-col gap-[23px]">
-                  <div className="flex justify-between gap-5 sm: flex-col">
+                  <div className="flex justify-between gap-5 sm:flex-col">
                     <div className="flex items-center gap-4">
                       <Button
+                        color="blue_gray_900_01"
                         size="xs"
-                        className="w- [20px] self-start rounded"
+                        className="w-[20px] self-start rounded"
                       >
-                        | <Img src="images/img_checkmark_white_a700.svg" />
+                       <Img src="images/img_checkmark_white_a700.svg" />
                       </Button>
                       <Heading as="h2">4/4 ITEMS SELECTED</Heading>
                     </div>
@@ -124,7 +125,7 @@ export default function ShoppingCartPage() {
                       <Heading as="h4">MOVE TO WISHLIST</Heading>
                     </div>
                   </div>
-                  <div className="h-px bg-blue_gray-100" />
+                  <div className="h-px bg-blue_gray-100"/>
                 </div>
                 <div className="flex flex-col gap-4">
                   <Suspense fallback={<div>Loading feed...</div>}>

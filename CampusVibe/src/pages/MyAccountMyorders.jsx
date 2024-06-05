@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Helmet } from "react-helmet";
 import { SelectBox, Img, Text, Heading } from "../components";
 import Footer from "../components/Footer";
@@ -133,6 +133,7 @@ export default function MyAccountMyordersPage() {
                 </div>
               </div>
               <div className="h-full w-px bg-gray-300 md:h-px md:w-full" />
+
               {/* account navigation section */}
               <div className="flex flex-1 flex-col gap-[23px] md:self-stretch">
                 <div className="flex flex-col gap-3.5">
@@ -140,7 +141,7 @@ export default function MyAccountMyordersPage() {
                     <Text as="p" className="self-end !font-medium">
                       My Orders
                     </Text>
-                    <div className="flex w-[17%] items-center justify-center gap-2">
+                    <div className="flex w-auto items-center justify-center gap-2">
                       <Text as="p" className="self-end !font-medium">
                         Sort by:
                       </Text>
@@ -165,12 +166,14 @@ export default function MyAccountMyordersPage() {
                 </div>
                 {/* order history section */}
                 <div className="flex flex-col gap-6">
-                  {data.map((d, index) => (
-                    <MyAccountMyOrdersProduct
-                      {...d}
-                      key={"productsList" + index}
-                    />
-                  ))}
+                  <Suspense fallback={<div>Loading feed...</div>}>
+                    {data.map((d, index) => (
+                      <MyAccountMyOrdersProduct
+                        {...d}
+                        key={"productsList" + index}
+                      />
+                    ))}
+                  </Suspense>
                 </div>
               </div>
             </div>

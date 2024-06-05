@@ -81,25 +81,21 @@ export default function CheckoutPage() {
                         </Text>
                       </div>
                     </div>
-                    <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md border border-solid border-blue_gray-100 bg-white-A700 p-4 md:flex-col">
+                    <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md border border-solid border-blue_gray-100 bg-white-A700 p-4 ">
                       <Img
                         src="images/img_clock.svg"
                         alt="google pay icon"
-                        className="h-[36px] w-[36px] md:w-full"
+                        className="h-[36px] w-[36px] "
                       />
-                      <div className="flex flex-1 items-center justify-center gap-2.5 md:self-stretch">
-                        <div className="flex px-px pb-[5px] pt-[7px]">
-                          <Img
+                      <div className="flex items-center gap-4">
+                        <Img
                             src="images/img_settings.svg"
                             alt="settings icon"
-                            className="h-[17px]"
-                          />
-                        </div>
-                        <div className="flex">
-                          <Text size="xl" as="p">
-                            Google Pay
-                          </Text>
-                        </div>
+                            className="h-[34px]"
+                        />
+                        <Text size="xl" as="p" className="self-end">
+                          Google Pay
+                        </Text>
                       </div>
                     </div>
                     <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md border border-solid border-blue_gray-100 bg-white-A700 p-4">
@@ -230,7 +226,7 @@ export default function CheckoutPage() {
                       </div>
                       <Button
                         color="blue_gray_900_01"
-                        size="5x1"
+                        size="5xl"
                         shape="round"
                         className="w-full font-medium sm:px-5"
                       >
@@ -290,7 +286,7 @@ export default function CheckoutPage() {
                 </div>
                 <Button
                   color="gray_300_02"
-                  size="5x1"
+                  size="5xl"
                   shape="round"
                   className="w-full font-medium sm:px-5"
                 >

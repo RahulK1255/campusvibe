@@ -67,11 +67,11 @@ export default function MyAccountMyOrdersProduct({
               {buyItAgain}
             </Button>
           </div>
-          <div className="flex w-[30%] flex-col gap-3 sm:w-full">
+          <div className="flex w-[30%] flex-col gap-3">
             <Button
               color="blue_gray_900_01"
               shape="round"
-              className="w-full border border-solid border-blue_gray-900_01 font-medium sm:px-5"
+              className="w-full border border-solid border-blue_gray-900_01 font-medium px-3 sm:px-5 min-w-[150px]"
             >
               {trackpackagebutton}
             </Button>
@@ -79,7 +79,7 @@ export default function MyAccountMyOrdersProduct({
               color="gray_600"
               variant="outline"
               shape="round"
-              className="w-full font-medium sm:px-5"
+              className="w-full font-medium px-3 sm:px-5 min-w-[150px]"
             >
               {vieworeditbutton}
             </Button>

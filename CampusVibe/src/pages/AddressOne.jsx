@@ -32,6 +32,7 @@ export default function AddressOnePage() {
         <div className="flex flex-col gap-6">
           {/* promo announcement section */}
           <Header />
+
           {/* breadcrumb navigation section */}
           <div className="flex flex-col items-center gap-[46px]">
             <div className="container-xs flex flex-col items-center md:p-5">
@@ -167,7 +168,7 @@ export default function AddressOnePage() {
                   </div>
                   <Button
                     color="blue_gray_900_01"
-                    size="5x1"
+                    size="5xl"
                     shape="round"
                     className="min-w-[178px] font-medium sm:px-5"
                   >
@@ -193,7 +194,7 @@ export default function AddressOnePage() {
                           Discount on MRP
                         </Text>
                         <Text as="p" className="!text-green-600_01">
-                          -1430
+                          -₹1430
                         </Text>
                       </div>
                       <div className="flex flex-wrap items-center justify-between gap-5">
@@ -201,7 +202,7 @@ export default function AddressOnePage() {
                           Coupon Discount
                         </Text>
                         <Text as="p" className="self-start !text-green-600_01">
-                          -179
+                          -₹179
                         </Text>
                       </div>
                       <div className="flex justify-between gap-5">

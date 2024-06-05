@@ -21,23 +21,14 @@ export default function Footer({ ...props }) {
               Get 20% off on your first order just by subscribing to our
               newsletter
             </Text>
-            <div className="relative h-[66px] w-[78%] md:h-auto">
-              <Input
-                color="blue_gray_900_0c"
-                size="md"
-                shape="round"
-                name="Email Input"
-                placeholder="Your business email"
-                className="w-full border-blue_gray-900_01 sm:pr-5"
-              />
-              <Button
-                color="blue_700"
-                shape="round"
-                className="absolute bottom-0 right-[8.00px] top-0 my-auto min-w-[151px] font-medium sm:px-5"
-              >
-                GET STARTED
-              </Button>
-            </div>
+            <Input
+              color="blue_gray_900_0c"
+              size="md"
+              shape="round"
+              name="Email Input"
+              placeholder={`Your business email`}
+              className="w-[78%] border-blue_gray-900_01 sm:pr-5"
+            />
           </div>
           <Img
             src="images/img_two_fashion_lau.png"
@@ -197,7 +188,7 @@ export default function Footer({ ...props }) {
               <Text size="md" as="p" className="self-end !text-white-A700_cc">
                 © 2020 All Right Reserved
               </Text>
-              <div className="flex w-[11%] justify-between gap-5">
+              <div className="flex w-auto justify-between gap-5">
                 <Img
                   src="images/img_bx_bxl_instagram_alt.svg"
                   alt="instagram icon"

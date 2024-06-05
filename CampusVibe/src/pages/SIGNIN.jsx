@@ -14,7 +14,7 @@ export default function SIGNINPage() {
       </Helmet>
       {/* main container section */}
       <div className="w-full bg-gray-200">
-        <div className="flex md: flex-col">
+        <div className="flex md:flex-col">
           {/* header section */}
           <div className="flex w-[50%] flex-col justify-center gap-[50px] bg-white-A700 px-12 pb-[383px] pt-[47px] md:w-full md:p-5">
             <Img
